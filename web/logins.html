@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Logins | E-Shopper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+          
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							
+								<li><a href="#"><i class="fa fa-phone"></i>+94 112-345-67</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> lookatme@gmail.com</a></li>
+							
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+							
+								<li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							
+							
+							
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+                                                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Mens<i class="fa fa-angle-down"></i></a>
+                                                                    <ul role="menu" class="sub-menu">
+                                                                                <li><a href="#">Short sleeve</a></li>
+										<li><a href="#">Long sleeve</a></li> 
+										<li><a href="gent_trousers.html">Trousers</a></li> 
+										<li><a href="Shoes.html">Shoes</a></li> 
+										<li><a href="#">Ties & cufflinks</a></li> 
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="dropdown"><a href="#">Womens<i class="fa fa-angle-down"></i></a>
+                                                                    <ul role="menu" class="sub-menu">
+                                                                                <li><a href="#">Formal tops</a></li>
+										<li><a href="#">Coats & Trousers</a></li> 
+										<li><a href="womens shoes.html">Shoes</a></li> 
+										<li><a href="bags.html">Handbags</a></li> 
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+	<section id="logins">
+		<div class="container">
+			
+		
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="left-sidebar">
+						
+			<div class="login-form"><!--login form-->
+                            <h2>Login to your account</h2>
+                            <form name="loginForm" action="login" method="post">
+                                <div> 
+                                    <form name="myForm">
+                                        <label for="username">Username</label>
+                                        <input type="text" id="username" name="username" ng-model="username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                                        <br />
+         
+                                        <label for="password">Password</label>
+                                        <input type="password" id="password" name="password" ng-model="formData.password" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required  />
+                                        <span ng-show="myForm.password.$error.required && myForm.password.$dirty"></span>
+                      
+                                        <div>
+                                         <input type="submit" value="submit" class="btn" />
+                                          <br />
+                                            <br />
+                                 
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+
+                            </form>
+                        </div>
+                                        </div>
+                                </div>
+                          
+                    <div class="col-sm-1">
+                        <h2 class="or">OR</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="signup-form">
+                            <h2>New User Signup!</h2>
+                            <form name="registerForm" action="register" method="post">
+
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" ng-model="fname" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                                <br />
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="fname" name="lname" ng-model="lname" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                                <br />
+
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" ng-model="username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                                <br />
+                                <form name="forms">
+          Password:                          
+     <input placeholder="Password"
+           name="pwd" ng-model="thePwd" ng-model-options="{ updateOn: 'blur' }"
+           required type="password" pattern=".{2,}" />
+    
+Confirm password:
+    <input placeholder="Check Password"
+           name="check" ng-model="chkPwd"
+           type="password" wj-valid="chkPwd == thePwd" />
+    <div class="error-message"
+         ng-show="forms.check.$invalid && !forms.check.$pristine">
+   
+    </div>
+      
+                                </form>
+    
+
+                        </div>
+
+                        <label for="email">Email</label>
+                        <input name="email" type="email" ng-model="obj.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required /></p>
+                        <div ng-messages="cardForm.email.$error" ng-messages-include="error-messages">
+
+                        </div>
+                        <!--date-->
+
+                        <label for="date-birth"   name="gender" class="control-label">Birth date:</label>
+                        <div class="control"><br>
+                            <input id="date-birth" class="form-control"  name="dateOfBirth" type="date" ng-model="dateBirth"></br>
+                        </div>
+                        
+                        <label for="singleSelect" name="gender"> Gender </label>
+                        <select id="singleSelect" name="singleSelect" ng-model="data.singleSelect">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        
+                        
+                         <input type="Register" value='Register' class="btn"/> 
+                   
+
+                        </form>
+                    </div><!--/sign up form-->
+                </div>
+            </div>
+        </div>
+    </section><!--/form-->
+		</div>
+	</section> <!--/#cart_items-->
+
+	<section id="do_action">
+		<div class="container">
+			
+			
+				
+			</div>
+		</div>
+	</section><!--/#do_action-->
+
+	<footer id="footer">
+		<div class="footer-top">
+                    <div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Service</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Online Help</a></li>
+								<li><a href="#">Contact Us</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Quick Shop</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Mens</a></li>
+								<li><a href="#">Womens</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Policies</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>About Us</h2>
+							<ul class="nav nav-pills nav-stacked">
+                                                                <li><a href="#">Store Location</a></li>
+								<li><a href="#">Copyright</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Get latest updates</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Get the most recent updates from <br />our site and be updated your self...</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+                                    	<p class="pull-left">Copyright © 2016 LOOK @ ME Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a>Group LOOK @ ME</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer>	
+
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
