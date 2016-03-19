@@ -26,7 +26,7 @@ public class RegisterServelet extends HttpServlet {
             Statement statement = dbConnection.createStatement();
 
             String userName = request.getParameter("username");
-            String password = request.getParameter("password");
+            String password = request.getParameter("pwd");
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
@@ -44,6 +44,72 @@ public class RegisterServelet extends HttpServlet {
                     + "('" + nextCustomerId
                     + "','" + userName + "','" + password + "');");
             response.sendRedirect("cart.html");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 return;
         } catch (SQLException ex) {
             Logger.getLogger(LoginServelet.class.getName()).log(Level.SEVERE, null, ex);

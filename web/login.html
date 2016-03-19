@@ -18,7 +18,7 @@ and open the template in the editor.
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
-             
+
         <link rel="shortcut icon" href="images/ico/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -111,8 +111,8 @@ and open the template in the editor.
                                 </ul>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="col-sm-3">
                             <div class="search_box pull-right">
                                 <input type="text" placeholder="Search"/>
@@ -133,21 +133,21 @@ and open the template in the editor.
                                 <div> 
                                     <form name="myForm">
                                         <label for="username">Username</label>
-                                        <input type="text" id="username" name="username" ng-model="username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                                        <input type="text" id="username" name="lgUserName" ng-model="username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
                                         <br />
-         
+
                                         <label for="password">Password</label>
-                                        <input type="password" id="password" name="password" ng-model="formData.password" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required  />
+                                        <input type="password" id="password" name="lgPassword" ng-model="formData.password" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required  />
                                         <span ng-show="myForm.password.$error.required && myForm.password.$dirty"></span>
-                      
-                 
+
+
                                         <div>
-                                         <input type="submit" value="submit" class="btn" />
-                                          <br />
+                                            <input type="submit" value="submit" class="btn" />
                                             <br />
-                                 
+                                            <br />
+
                                         </div>
-                                        
+
                                     </form>
                                 </div>
 
@@ -174,133 +174,150 @@ and open the template in the editor.
                                 <label for="username">Username</label>
                                 <input type="text" id="username" name="username" ng-model="username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
                                 <br />
-                                <form name="forms">
-          Password:                          
-     <input placeholder="Password"
-           name="pwd" ng-model="thePwd" ng-model-options="{ updateOn: 'blur' }"
-           required type="password" pattern=".{2,}" />
-    
-Confirm password:
-    <input placeholder="Check Password"
-           name="check" ng-model="chkPwd"
-           type="password" wj-valid="chkPwd == thePwd" />
-    <div class="error-message"
-         ng-show="forms.check.$invalid && !forms.check.$pristine">
-   
-    </div>
-      
-                                </form>
-    
 
-                        </div>
+                               
+                                
+                                <script>
+                                    function check() {
 
-                        <label for="email">Email</label>
-                        <input name="email" type="email" ng-model="obj.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required /></p>
-                        <div ng-messages="cardForm.email.$error" ng-messages-include="error-messages">
+                                        if (document.getElementById('pwd').value === document.getElementById('confirm_password').value) {
+                                            document.getElementById('message').innerHTML = "match";
+                                        } else {
+                                            document.getElementById('message').innerHTML = "no match";
+                                        }
+                                    }
+                                </script>
 
-                        </div>
-                        <!--date-->
+                                 Password:                          
+                                <input placeholder="Password"
+                                       name="pwd" id="pwd" ng-model="thePwd" ng-model-options="{updateOn: 'blur'}"
+                                       required type="password" pattern=".{2,}" />
 
-                        <label for="date-birth"   name="gender" class="control-label">Birth date:</label>
-                        <div class="control"><br>
-                            <input id="date-birth" class="form-control"  name="dateOfBirth" type="date" ng-model="dateBirth"></br>
-                        </div>
-                        
-                        <label for="singleSelect" name="gender"> Gender </label>
-                        <select id="singleSelect" name="singleSelect" ng-model="data.singleSelect">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                        
-                        
-                         <input type="Register" value='Register' class="btn"/> 
-                   
+                                <label>confirm password:</label>
+                                <input type="password" name="confirm_password" id="confirm_password" onchange="check()"/> 
+                                <div class="social-icons pull-right">
+                                    <span id='message'></span>
+                                </div> 
 
-                        </form>
-                    </div><!--/sign up form-->
+
+
+                                
+                                <label for="email">Email</label>
+                                <input name="email" type="email" ng-model="obj.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required /></p>
+                                <div ng-messages="cardForm.email.$error" ng-messages-include="error-messages">
+
+                                </div>
+                                <!--date-->
+
+                                <label for="date-birth"   name="gender" class="control-label">Birth date:</label>
+                                <div class="control"><br>
+                                    <input id="date-birth" class="form-control"  name="dateOfBirth" type="date" ng-model="dateBirth"></br>
+                                </div>
+
+                                <label for="singleSelect" name="gender"> Gender </label>
+                                <select id="singleSelect" name="singleSelect" ng-model="data.singleSelect">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <div>
+                                    <br />
+
+                                    <br />
+
+                                    <input type="submit" value="Register" class="btn" />
+                                    <br />
+                                    <br />
+
+                                </div>
+
+
+
+
+                            </form>
+                        </div><!--/sign up form-->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section><!--/form-->
+        </section><!--/form-->
 
-<footer id="footer"><!--Footer-->
-		<div class="footer-top">
-                    <div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quick Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Us</h2>
-							<ul class="nav nav-pills nav-stacked">
-                                                                <li><a href="#">Store Location</a></li>
-								<li><a href="#">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>Get latest updates</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-		</div>
-		
-		
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-                                    	<p class="pull-left">Copyright © 2016 LOOK @ ME Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a>Group LOOK @ ME</a></span></p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	
+        <footer id="footer"><!--Footer-->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Service</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Online Help</a></li>
+                                    <li><a href="#">Contact Us</a></li>
 
-  
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
-</body>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Quick Shop</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Mens</a></li>
+                                    <li><a href="#">Womens</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Policies</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>About Us</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Store Location</a></li>
+                                    <li><a href="#">Copyright</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-1">
+                            <div class="single-widget">
+                                <h2>Get latest updates</h2>
+                                <form action="#" class="searchform">
+                                    <input type="text" placeholder="Your email address" />
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                                    <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">Copyright © 2016 LOOK @ ME Inc. All rights reserved.</p>
+                        <p class="pull-right">Designed by <span><a>Group LOOK @ ME</a></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer><!--/Footer-->
+
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/price-range.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

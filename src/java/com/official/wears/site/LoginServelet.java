@@ -30,8 +30,8 @@ public class LoginServelet extends HttpServlet {
             Connection dbConnection = DBConnector.getDbCon().conn;
             Statement statement = dbConnection.createStatement();
 
-            String un = request.getParameter("username");
-            String pw = request.getParameter("password");
+            String un = request.getParameter("lgUserName");
+            String pw = request.getParameter("lgPassword");
             String dbPassWord = null;
             ResultSet res = statement.executeQuery("select password from customerlogininfo where username = '"+un+"'");
              while (res.next()) {
@@ -50,3 +50,18 @@ public class LoginServelet extends HttpServlet {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
